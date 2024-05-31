@@ -9,4 +9,4 @@ gradle-app.setting(*)
 target/
 
 
-./.idea
+.idea/
