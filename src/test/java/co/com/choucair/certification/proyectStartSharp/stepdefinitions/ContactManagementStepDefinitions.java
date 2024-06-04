@@ -9,6 +9,8 @@ import net.serenitybdd.screenplay.actors.OnStage;
 
 
 import static co.com.choucair.certification.proyectStartSharp.utils.GlobalData.*;
+import co.com.choucair.certification.proyectStartSharp.models.CredentialsLoombokData;
+import co.com.choucair.certification.proyectStartSharp.tasks.Login;
 
 
 public class ContactManagementStepDefinitions {
@@ -19,11 +21,14 @@ public class ContactManagementStepDefinitions {
     }
     @And("I will enter the following credentials")
     public void iWillEnterTheFollowingCredentials(io.cucumber.datatable.DataTable dataTable) {
-        System.out.println("Background And");
+
+        //Login login = new Login(CredentialsLoombokData.setData(dataTable).get(0));
+        //login.printCredentials();
+        OnStage.theActorInTheSpotlight().attemptsTo(Login.onTheSite(CredentialsLoombokData.setData(dataTable).get(0)));
     }
-    @Given("Im in the contact creation view")
-    public void imInTheContactCreationView() {
-        // Write code here that turns the phrase above into concrete actions
+    @Given("^Im in the (.*) view")
+    public void imInTheContactCreationView(String typeCreation) {
+        //OnStage.theActorInTheSpotlight().attemptsTo();
         System.out.println("Scenario1 Given");
     }
     @When("I fill out the new contact form with the following information")
@@ -37,10 +42,11 @@ public class ContactManagementStepDefinitions {
         // For other transformations you can register a DataTableType.
         System.out.println("Scenario1 When");
     }
-    @Then("I search the firstname contact on the tree")
-    public void iSearchTheFirstnameContactOnTheTree() {
+
+    @Then("^I search the (.*) contact on the tree$")
+    public void iSearchTheUserNameContactOnTheTree(String user) {
         // Write code here that turns sthe phrase above into concrete actions
-        System.out.println("Scenario1 Then");
+        System.out.println("Scenario1 Then "+user);
     }
     @And("Validate the contact information")
     public void validateTheContactInformation() {

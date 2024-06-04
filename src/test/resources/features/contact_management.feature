@@ -12,13 +12,13 @@ Feature: Create Contact
 
   @Scenario1
   Scenario Outline: Create a new Contact
-    Given Im in the contact creation view
+    Given Im in the <typeView> view
     When  I fill out the new contact form with the following information
-      | title   | firstName   | lastName   | email   | identityNum   | user   |
-      | <title> | <firstName> | <lastName> | <email> | <identityNum> | <user> |
-    Then I search the firstname contact on the tree
+      | title   | firstName   | lastName   | email   | identityNum   | user   | typeView   |
+      | <title> | <firstName> | <lastName> | <email> | <identityNum> | <user> | <typeView> |
+    Then I search the <userName> contact on the tree
     And Validate the contact information
 
     Examples:
-      | title | firstName | lastName | email            | identityNum | user        |
-      | Mr.   | Robert    | Downey   | rdowney@mail.com | 123456123   | jason.baker |
+      | title | firstName | lastName | email            | identityNum | userName    | typeView |
+      | Mr.   | Robert    | Downey   | rdowney@mail.com | 123456123   | jason.baker | typeView |

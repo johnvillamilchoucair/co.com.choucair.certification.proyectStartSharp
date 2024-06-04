@@ -16,7 +16,7 @@ Feature: Start Sharp
     And  I fill out the new meeting form with the following information
       | meetingName   | meetingType   | meetingNumber   | startDate   | endDate   | location   | unit   | organizedBy   | reporter   | attendeeList   |
       | <meetingName> | <meetingType> | <meetingNumber> | <startDate> | <endDate> | <location> | <unit> | <organizedBy> | <reporter> | <attendeeList> |
-    Then I search the <nameMeeting> on the tree
+    Then I search the <meetingName> on the tree
     And Validate the meeting information
     Examples:
       | meetingName | meetingType | meetingNumber  | startDate        | endDate          | location | unit       | organizedBy  | reporter     | attendeeList |
