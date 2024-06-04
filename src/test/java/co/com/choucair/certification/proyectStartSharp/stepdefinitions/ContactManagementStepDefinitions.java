@@ -1,5 +1,6 @@
 package co.com.choucair.certification.proyectStartSharp.stepdefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
@@ -10,7 +11,9 @@ import net.serenitybdd.screenplay.actors.OnStage;
 
 import static co.com.choucair.certification.proyectStartSharp.utils.GlobalData.*;
 import co.com.choucair.certification.proyectStartSharp.models.CredentialsLoombokData;
+import co.com.choucair.certification.proyectStartSharp.models.TypeViewData;
 import co.com.choucair.certification.proyectStartSharp.tasks.Login;
+import co.com.choucair.certification.proyectStartSharp.tasks.GoToSection;
 
 
 public class ContactManagementStepDefinitions {
@@ -20,27 +23,16 @@ public class ContactManagementStepDefinitions {
         System.out.println("Background Given");
     }
     @And("I will enter the following credentials")
-    public void iWillEnterTheFollowingCredentials(io.cucumber.datatable.DataTable dataTable) {
-
-        //Login login = new Login(CredentialsLoombokData.setData(dataTable).get(0));
-        //login.printCredentials();
+    public void iWillEnterTheFollowingCredentials(DataTable dataTable) {
         OnStage.theActorInTheSpotlight().attemptsTo(Login.onTheSite(CredentialsLoombokData.setData(dataTable).get(0)));
     }
     @Given("^Im in the (.*) view")
-    public void imInTheContactCreationView(String typeCreation) {
-        //OnStage.theActorInTheSpotlight().attemptsTo();
-        System.out.println("Scenario1 Given");
+    public void imInTheContactCreationView(String typeView) {
+        OnStage.theActorInTheSpotlight().attemptsTo(GoToSection.onTheSite(new TypeViewData(typeView)));
     }
     @When("I fill out the new contact form with the following information")
-    public void iFillOutTheNewContactFormWithTheFollowingInformation(io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-        // Double, Byte, Short, Long, BigInteger or BigDecimal.
-        //
-        // For other transformations you can register a DataTableType.
-        System.out.println("Scenario1 When");
+    public void iFillOutTheNewContactFormWithTheFollowingInformation(DataTable dataTable) {
+
     }
 
     @Then("^I search the (.*) contact on the tree$")

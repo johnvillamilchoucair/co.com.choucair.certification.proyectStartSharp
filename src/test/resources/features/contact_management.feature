@@ -20,5 +20,5 @@ Feature: Create Contact
     And Validate the contact information
 
     Examples:
-      | title | firstName | lastName | email            | identityNum | userName    | typeView |
-      | Mr.   | Robert    | Downey   | rdowney@mail.com | 123456123   | jason.baker | typeView |
+      | title | firstName | lastName | email            | identityNum | userName    | typeView            |
+      | Mr.   | Robert    | Downey   | rdowney@mail.com | 123456123   | jason.baker | creationContactView |

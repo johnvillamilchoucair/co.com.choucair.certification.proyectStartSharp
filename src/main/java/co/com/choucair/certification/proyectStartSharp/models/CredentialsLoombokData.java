@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 public class CredentialsLoombokData {
-    String username;
-    String password;
+    private String username;
+    private String password;
 
     public static List<CredentialsLoombokData> setData(DataTable table){
         List<CredentialsLoombokData> data = new ArrayList<>();
