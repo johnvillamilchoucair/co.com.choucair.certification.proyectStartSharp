@@ -17,6 +17,24 @@ public class ContactLoombokData {
     private String userName;
     private String typeView;
 
+    public ContactLoombokData() {
+    }
+
+    public ContactLoombokData(DataTable dataTable) {
+        // Convert the DataTable to a List of Maps
+        List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
+
+        Map<String, String> row = data.get(0);
+
+        this.title = row.get("title");
+        this.firstName = row.get("firstName");
+        this.lastName = row.get("lastName");
+        this.email = row.get("email");
+        this.identityNum = row.get("identityNum");
+        this.userName = row.get("userName");
+        this.typeView = row.get("typeView");
+    }
+
     public static List<ContactLoombokData> setData(DataTable table){
         List<ContactLoombokData> data = new ArrayList<>();
         List<Map<String, String>> mapList = table.asMaps();
