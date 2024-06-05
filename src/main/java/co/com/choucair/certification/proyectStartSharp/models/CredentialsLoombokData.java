@@ -16,7 +16,6 @@ public class CredentialsLoombokData {
         List<Map<String, String>> mapList = table.asMaps();
         for (Map<String, String> map : mapList) {
             data.add(new ObjectMapper().convertValue(map, CredentialsLoombokData.class));
-            System.out.println(new ObjectMapper().convertValue(map, CredentialsLoombokData.class));
         }
         return data;
     }

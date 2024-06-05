@@ -14,10 +14,9 @@ Feature: Create Contact
   Scenario Outline: Create a new Contact
     Given Im in the <typeView> view
     When  I fill out the new contact form with the following information
-      | title   | firstName   | lastName   | email   | identityNum   | user   | typeView   |
-      | <title> | <firstName> | <lastName> | <email> | <identityNum> | <user> | <typeView> |
-    Then I search the <userName> contact on the tree
-    And Validate the contact information
+      | title   | firstName   | lastName   | email   | identityNum   | userName   | typeView   |
+      | <title> | <firstName> | <lastName> | <email> | <identityNum> | <userName> | <typeView> |
+    Then I search and validate the new contact data on the tree
 
     Examples:
       | title | firstName | lastName | email            | identityNum | userName    | typeView            |

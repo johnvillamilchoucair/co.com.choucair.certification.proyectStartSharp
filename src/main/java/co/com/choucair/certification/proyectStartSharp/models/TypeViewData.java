@@ -17,7 +17,6 @@ public class TypeViewData {
         List<Map<String, String>> mapList = table.asMaps();
         for (Map<String, String> map : mapList) {
             data.add(new ObjectMapper().convertValue(map, TypeViewData.class));
-            System.out.println(new ObjectMapper().convertValue(map, TypeViewData.class));
         }
         return data;
     }

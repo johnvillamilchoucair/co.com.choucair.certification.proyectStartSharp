@@ -39,12 +39,14 @@ dependencies {
     implementation group: 'net.serenity-bdd', name: 'serenity-cucumber', version: "${versionSerenity}"
     //implementation group: 'io.cucumber', name: 'datatable', version: "${versionCucumber}"
     implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
-    //testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: "${versionCucumber}"
-    //implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: "${versionSerenity}"
-    //implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: "${versionSerenity}"
-    //implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: "${versionSerenity}"
-    //implementation group: 'net.serenity-bdd', name: 'serenity-core', version: "${versionSerenity}"
-    //implementation group: 'net.serenity-bdd', name: 'serenity-report-resources', version: "${versionSerenity}"
+
+
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: "${versionCucumber}"
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: "${versionSerenity}"
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: "${versionSerenity}"
+    implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: "${versionSerenity}"
+    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: "${versionSerenity}"
+    implementation group: 'net.serenity-bdd', name: 'serenity-report-resources', version: "${versionSerenity}"
 
     implementation group: 'net.serenity-bdd', name: 'serenity-ensure',version: "${versionSerenity}"
 

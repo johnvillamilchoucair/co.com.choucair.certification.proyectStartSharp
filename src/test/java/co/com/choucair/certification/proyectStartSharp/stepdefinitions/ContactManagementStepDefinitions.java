@@ -1,5 +1,6 @@
 package co.com.choucair.certification.proyectStartSharp.stepdefinitions;
 
+import co.com.choucair.certification.proyectStartSharp.models.ContactLoombokData;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -14,13 +15,12 @@ import co.com.choucair.certification.proyectStartSharp.models.CredentialsLoombok
 import co.com.choucair.certification.proyectStartSharp.models.TypeViewData;
 import co.com.choucair.certification.proyectStartSharp.tasks.Login;
 import co.com.choucair.certification.proyectStartSharp.tasks.GoToSection;
-
+import co.com.choucair.certification.proyectStartSharp.tasks.CreateContact;
 
 public class ContactManagementStepDefinitions {
     @Given("I need to be on the StartSharp login page")
     public void iNeedToBeOnTheStartSharpLoginPage() {
         OnStage.theActorCalled(ACTOR).wasAbleTo(Open.url(URL));
-        System.out.println("Background Given");
     }
     @And("I will enter the following credentials")
     public void iWillEnterTheFollowingCredentials(DataTable dataTable) {
@@ -32,18 +32,13 @@ public class ContactManagementStepDefinitions {
     }
     @When("I fill out the new contact form with the following information")
     public void iFillOutTheNewContactFormWithTheFollowingInformation(DataTable dataTable) {
-
+        OnStage.theActorInTheSpotlight().attemptsTo(CreateContact.onTheSite(ContactLoombokData.setData(dataTable).get(0)));
     }
 
-    @Then("^I search the (.*) contact on the tree$")
-    public void iSearchTheUserNameContactOnTheTree(String user) {
-        // Write code here that turns sthe phrase above into concrete actions
-        System.out.println("Scenario1 Then "+user);
-    }
-    @And("Validate the contact information")
-    public void validateTheContactInformation() {
-        // Write code here that turns the phrase above into concrete actions
-        System.out.println("Scenario1 And");
+    @Then("^I search and validate the (.*) and (.*) contact on the tree$")
+    public void iSearchAndValidateTheFirstNameAndLastNameContactOnTheTree(String userName, String lastName) {
+
+        System.out.println("Scenario1 Then "+userName);
     }
 
 }

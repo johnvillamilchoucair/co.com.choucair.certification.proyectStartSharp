@@ -1,13 +1,12 @@
 package co.com.choucair.certification.proyectStartSharp.tasks;
 
-import co.com.choucair.certification.proyectStartSharp.models.CredentialsLoombokData;
-import net.serenitybdd.core.steps.Instrumented;
-
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.core.steps.Instrumented;
 
+import co.com.choucair.certification.proyectStartSharp.models.CredentialsLoombokData;
 import static co.com.choucair.certification.proyectStartSharp.userinterfaces.LoginPage.*;
 
 public class Login implements Task{
