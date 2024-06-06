@@ -3,20 +3,15 @@ package co.com.choucair.certification.proyectStartSharp.stepdefinitions;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.GivenWhenThen;
 
 import co.com.choucair.certification.proyectStartSharp.models.ContactLoombokData;
-import static co.com.choucair.certification.proyectStartSharp.utils.GlobalData.*;
-import co.com.choucair.certification.proyectStartSharp.models.CredentialsLoombokData;
 import co.com.choucair.certification.proyectStartSharp.models.TypeViewData;
-import co.com.choucair.certification.proyectStartSharp.tasks.Login;
 import co.com.choucair.certification.proyectStartSharp.tasks.GoToSection;
 import co.com.choucair.certification.proyectStartSharp.tasks.CreateContact;
-import co.com.choucair.certification.proyectStartSharp.questions.ValidateData;
+import co.com.choucair.certification.proyectStartSharp.questions.ValidateNewContactData;
 
 public class ContactManagementStepDefinitions {
     //@Given("I need to be on the StartSharp login page")
@@ -38,7 +33,7 @@ public class ContactManagementStepDefinitions {
 
     @Then("I search and validate the new contact data on the tree")
     public void iSearchAndValidateTheNewContactDataOnTheTree(DataTable dataTable) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidateData.AfterSearching(new ContactLoombokData(dataTable))));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidateNewContactData.AfterSearching(new ContactLoombokData(dataTable))));
     }
 
 }

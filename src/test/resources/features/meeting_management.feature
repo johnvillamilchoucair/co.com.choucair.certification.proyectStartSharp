@@ -20,5 +20,5 @@ Feature: Start Sharp
       | meetingName   | meetingType   | meetingNumber   | startDate   | endDate   | location   | unit   | organizedBy   | reporter   | attendeeList   |
       | <meetingName> | <meetingType> | <meetingNumber> | <startDate> | <endDate> | <location> | <unit> | <organizedBy> | <reporter> | <attendeeList> |
     Examples:
-      | meetingName | meetingType | meetingNumber  | startDate        | endDate          | location | unit       | organizedBy  | reporter     | attendeeList  | typeView            |
-      | MyMeeting2   | Strategy    | 00056763335422 | 06/06/2024 14:17 | 06/06/2024 16:17 | On Site  | Technology | Adam Edwards | Allison Bell | Brian Morgan | creationMeetingView |
+      | meetingName | meetingType | meetingNumber  | startDate           | endDate             | location | unit   | organizedBy  | reporter     | attendeeList | typeView            |
+      | MyMeeting4  | Strategy    | 00056763335422 | 06/06/2024 14:17:00 | 06/06/2024 16:17:00 | On Site  | Design | Adam Edwards | Allison Bell | Brian Morgan | creationMeetingView |

@@ -15,8 +15,17 @@ import co.com.choucair.certification.proyectStartSharp.tasks.GoToSection;
 import co.com.choucair.certification.proyectStartSharp.models.TypeViewData;
 import co.com.choucair.certification.proyectStartSharp.tasks.CreateMeeting;
 import co.com.choucair.certification.proyectStartSharp.models.MeetingLoombokData;
+import co.com.choucair.certification.proyectStartSharp.questions.ValidateNewMeetingData;
 
 public class MeetingManagementStepDefinitions {
+    //@Given("I need to be on the StartSharp login page")
+    //public void iNeedToBeOnTheStartSharpLoginPage() {
+    //    OnStage.theActorCalled(ACTOR).wasAbleTo(Open.url(URL));
+    //}
+    //@And("I will enter the following credentials")
+    //public void iWillEnterTheFollowingCredentials(DataTable dataTable) {
+    //    OnStage.theActorInTheSpotlight().attemptsTo(Login.onTheSite(CredentialsLoombokData.setData(dataTable).get(0)));
+    //}
     @Given("^Im in the meeting (.*) view")
     public void imInTheMeetingTypeView(String typeView) {
         OnStage.theActorInTheSpotlight().attemptsTo(GoToSection.onTheSite(new TypeViewData(typeView)));
@@ -29,6 +38,6 @@ public class MeetingManagementStepDefinitions {
 
     @Then("I search and validate the new meeting data on the tree")
     public void iSearchAndValidateTheNewMeetingDataOnTheTree(DataTable dataTable) {
-
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidateNewMeetingData.AfterSearching(new MeetingLoombokData(dataTable))));
     }
 }
