@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.core.steps.Instrumented;
 
 import co.com.choucair.certification.proyectStartSharp.models.ContactLoombokData;
-
 import static co.com.choucair.certification.proyectStartSharp.userinterfaces.FormCreationContactPage.*;
 
 public class CreateContact implements Task{

@@ -12,7 +12,7 @@ Feature: Create Contact
 
   @Scenario1
   Scenario Outline: Create a new Contact
-    Given Im in the <typeView> view
+    Given Im in the contact <typeView> view
     When  I fill out the new contact form with the following information
       | title   | firstName   | lastName   | email   | identityNum   | userName   | typeView   |
       | <title> | <firstName> | <lastName> | <email> | <identityNum> | <userName> | <typeView> |

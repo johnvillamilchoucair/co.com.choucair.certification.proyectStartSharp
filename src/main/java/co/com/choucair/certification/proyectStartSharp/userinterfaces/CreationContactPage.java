@@ -12,10 +12,10 @@ public class CreationContactPage {
     public static final Target ORGANIZATION_MENU = Target.the("Organization Menu").
             located(By.cssSelector("ul#nav_menu1_3 > li > a"));
 
-    public static final Target CONTACTS_VIEW = Target.the("Contacts view").
+    public static final Target CONTACTS_VIEW_LIST = Target.the("Contacts view").
             located(By.cssSelector("ul#nav_menu1_3_1 > li:last-child >a"));
 
-    public static final Target BUTTON_NEWCONTACT_ON_CONTACTS_TREE = Target.the("Contacts view").
+    public static final Target BUTTON_NEW_CONTACT_ON_CONTACTS_TREE = Target.the("Contacts view").
             located(By.cssSelector("i.fa.fa-plus-circle.text-green"));
 
 

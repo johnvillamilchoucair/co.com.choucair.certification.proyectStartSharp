@@ -1,15 +1,12 @@
 package co.com.choucair.certification.proyectStartSharp.tasks;
 
 import co.com.choucair.certification.proyectStartSharp.models.TypeViewData;
-import static co.com.choucair.certification.proyectStartSharp.userinterfaces.CreationContactPage.*;
-
+import co.com.choucair.certification.proyectStartSharp.userinterfaces.CreationMeetingPage;
+import co.com.choucair.certification.proyectStartSharp.userinterfaces.CreationContactPage;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-
-import net.serenitybdd.screenplay.waits.WaitUntil;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class GoToSection implements Task{
     TypeViewData typeViewData;
@@ -18,14 +15,18 @@ public class GoToSection implements Task{
     public <T extends Actor> void performAs(T actor) {
         if(this.typeViewData.getTypeView().equals("creationContactView")){
             actor.attemptsTo(
-                    Click.on(HEADER_MENU),
-                    Click.on(ORGANIZATION_MENU),
-                    Click.on(CONTACTS_VIEW),
-                    Click.on(BUTTON_NEWCONTACT_ON_CONTACTS_TREE)
-                    //WaitUntil.the(SOME_ELEMENT_ON_NEXT_PAGE, isVisible()).forNoMoreThan(10).seconds()
+                    Click.on(CreationContactPage.HEADER_MENU),
+                    Click.on(CreationContactPage.ORGANIZATION_MENU),
+                    Click.on(CreationContactPage.CONTACTS_VIEW_LIST),
+                    Click.on(CreationContactPage.BUTTON_NEW_CONTACT_ON_CONTACTS_TREE)
             );
-        }else if(this.typeViewData.getTypeView().equals("another")){
-            System.out.println("otro");
+        }else if(this.typeViewData.getTypeView().equals("creationMeetingView")){
+            actor.attemptsTo(
+                    Click.on(CreationMeetingPage.HEADER_MENU),
+                    Click.on(CreationMeetingPage.MEETING_MENU),
+                    Click.on(CreationMeetingPage.MEETINGS_VIEW_LIST),
+                    Click.on(CreationMeetingPage.BUTTON_NEW_MEETING_ON_MEETINGS_TREE)
+            );
         }
     }
 
