@@ -1,7 +1,7 @@
 #Autor: John Villamil
 
 @Stories2
-Feature: Start Sharp
+Feature: Create Meeting
   As a StarSharp user, I want to create and validate a new Meeting
 
   Background:
