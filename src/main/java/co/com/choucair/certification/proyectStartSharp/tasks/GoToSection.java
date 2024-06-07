@@ -15,6 +15,7 @@ public class GoToSection implements Task{
     public <T extends Actor> void performAs(T actor) {
         if(this.typeViewData.getTypeView().equals("creationContactView")){
             actor.attemptsTo(
+                    //Click.on(CreationContactPage.SUB_MENU_OPTION_BUTTON.of("R")),
                     Click.on(CreationContactPage.HEADER_MENU),
                     Click.on(CreationContactPage.ORGANIZATION_MENU),
                     Click.on(CreationContactPage.CONTACTS_VIEW_LIST),

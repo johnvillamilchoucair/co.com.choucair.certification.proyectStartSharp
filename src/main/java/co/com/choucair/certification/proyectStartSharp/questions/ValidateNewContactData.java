@@ -34,7 +34,6 @@ public class ValidateNewContactData implements Question<Boolean> {
 
         actor.attemptsTo(
                 Enter.theValue(firstName+" "+lastName).into(INPUT_SEARCH_CONTACT)
-                //,WaitUntil.the(INPUT_SEARCH_CONTACT, WebElementStateMatchers.isVisible()).forNoMoreThan(5).seconds()
         );
 
         try {TimeUnit.SECONDS.sleep(2);}

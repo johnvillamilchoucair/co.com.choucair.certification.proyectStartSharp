@@ -6,6 +6,10 @@ import org.openqa.selenium.By;
 public class CreationContactPage {
     public CreationContactPage(){}
 
+    public static  final Target SUB_MENU_OPTION_BUTTON = Target.the("txt")
+            .locatedBy("//li[@class='s-sidebar-item']//span[contains(.,'{0}')]");
+
+
     public static final Target HEADER_MENU = Target.the("Header Menu").
             located(By.cssSelector("header > button > i"));
 

@@ -6,8 +6,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.core.steps.Instrumented;
-import net.serenitybdd.screenplay.actions.Scroll;
-import net.serenitybdd.screenplay.actions.MoveMouse;
 
 import co.com.choucair.certification.proyectStartSharp.models.MeetingLoombokData;
 import static co.com.choucair.certification.proyectStartSharp.userinterfaces.FormCreationMeetingPage.*;
@@ -51,11 +49,6 @@ public class CreateMeeting implements Task{
                 Click.on(SPAN_MEETING_ATTENDEELIST_LIST),
                 Enter.theValue(meetingLoombokData.getAttendeeList()).into(INPUT_MEETING_ATTENDEELIST_LIST),
                 Click.on(SPAN_MEETING_ELEMENT_ATTENDEELIST_LIST),
-
-                //Click.on(SELECT_MEETING_ELEMENT_ATTENDEELIST_LIST),
-                //Scroll.to(OPTION_MEETING_ELEMENT_ATTENDEELIST_LIST.of("Guest")),
-                //MoveMouse.to(OPTION_MEETING_ELEMENT_ATTENDEELIST_LIST.of("Guest")).andThen(actions -> actions.click()),
-
 
                 Click.on(BNT_SAVE)
 

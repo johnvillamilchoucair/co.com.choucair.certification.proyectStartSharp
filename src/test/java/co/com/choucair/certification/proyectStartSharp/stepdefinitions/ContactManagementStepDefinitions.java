@@ -14,14 +14,6 @@ import co.com.choucair.certification.proyectStartSharp.tasks.CreateContact;
 import co.com.choucair.certification.proyectStartSharp.questions.ValidateNewContactData;
 
 public class ContactManagementStepDefinitions {
-    //@Given("I need to be on the StartSharp login page")
-    //public void iNeedToBeOnTheStartSharpLoginPage() {
-    //    OnStage.theActorCalled(ACTOR).wasAbleTo(Open.url(URL));
-    //}
-    //@And("I will enter the following credentials")
-    //public void iWillEnterTheFollowingCredentials(DataTable dataTable) {
-    //    OnStage.theActorInTheSpotlight().attemptsTo(Login.onTheSite(CredentialsLoombokData.setData(dataTable).get(0)));
-    //}
     @Given("^Im in the contact (.*) view")
     public void imInTheContactTypeView(String typeView) {
         OnStage.theActorInTheSpotlight().attemptsTo(GoToSection.onTheSite(new TypeViewData(typeView)));
