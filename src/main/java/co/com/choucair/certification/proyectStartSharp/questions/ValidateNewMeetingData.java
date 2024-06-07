@@ -6,10 +6,10 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Enter;
 
 import co.com.choucair.certification.proyectStartSharp.models.MeetingLoombokData;
+import static co.com.choucair.certification.proyectStartSharp.userinterfaces.SearchNewMeetingPage.*;
 
 import java.util.concurrent.TimeUnit;
 
-import static co.com.choucair.certification.proyectStartSharp.userinterfaces.SearchNewMeetingPage.*;
 
 public class ValidateNewMeetingData implements Question<Boolean>{
 
