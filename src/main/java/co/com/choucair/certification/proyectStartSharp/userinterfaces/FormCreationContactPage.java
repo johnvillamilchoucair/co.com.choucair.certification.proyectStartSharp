@@ -29,11 +29,11 @@ public class FormCreationContactPage {
     public static final Target INPUT_USER_RELATED_LIST = Target.the("Input element for input on contact User related list Contact").
             located(By.cssSelector("input#s2id_autogen1_search"));
 
-    public static final Target ELEMENT_USER_RELATED_LIST = Target.the("Element for contact User related on the list Contact").
-            located(By.cssSelector("div#select2-drop > ul >li > div > span"));
+    public static final Target ELEMENT_USER_RELATED_LIST = Target.the("Element for contact User related on the list Contact")
+            .locatedBy("//div[@id='select2-drop']//ul//li");
+        //located(By.cssSelector("div#select2-drop > ul >li > div"));
 
     public static final Target BNT_SAVE = Target.the("Button for save and create the new contact").
             located(By.cssSelector("#Serenity_Pro_Organization_ContactDialog4_Toolbar > div > div > span > i"));
-
-
+    
 }

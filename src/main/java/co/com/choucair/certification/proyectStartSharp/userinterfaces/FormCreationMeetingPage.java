@@ -16,7 +16,8 @@ public class FormCreationMeetingPage {
     public static final Target INPUT_MEETINGTYPE_LIST = Target.the("Input element for Meeting type list").
             located(By.cssSelector("div#select2-drop > div:first-child > input"));
     public static final Target SPAN_TYPE_MEETINGTYPE_LIST = Target.the("Span element Type for Meeting type list").
-            located(By.cssSelector("div#select2-drop > ul > li > div >span"));
+            locatedBy("//div[@id='select2-drop']//ul//li");
+            //located(By.cssSelector("div#select2-drop > ul > li > div >span"));
 
 
     public static final Target INPUT_MEETING_N = Target.the("Input element for Meeting number").
@@ -34,7 +35,8 @@ public class FormCreationMeetingPage {
     public static final Target INPUT_MEETING_LOCATION_LIST = Target.the("Input element for Meeting location list").
             located(By.cssSelector("div#select2-drop > div > input#s2id_autogen7_search"));
     public static final Target SPAN_MEETING_ELEMENT_LOCATION_LIST = Target.the("Span element for Meeting location list").
-            located(By.cssSelector("div#select2-drop > ul > li > div > span"));
+            locatedBy("//div[@id='select2-drop']//ul//li//div");
+            //located(By.cssSelector("div#select2-drop > ul > li > div > span"));
 
     //Meeting Unit List
     public static final Target SPAN_MEETING_UNIT_LIST = Target.the("Span element for Meeting unit list").
@@ -42,7 +44,8 @@ public class FormCreationMeetingPage {
     public static final Target INPUT_MEETING_UNIT_LIST = Target.the("Input element for Meeting unit list").
             located(By.cssSelector("div#select2-drop > div > input#s2id_autogen8_search"));
     public static final Target SPAN_MEETING_ELEMENT_UNIT_LIST = Target.the("Span element for Meeting unit list").
-            located(By.cssSelector("div#select2-drop > ul > li > div > span"));
+            locatedBy("//div[@id='select2-drop']//ul//li");
+            //located(By.cssSelector("div#select2-drop > ul > li > div > span"));
 
 
     //Meeting organizedBy List
@@ -51,7 +54,8 @@ public class FormCreationMeetingPage {
     public static final Target INPUT_MEETING_ORGANIZEDBY_LIST = Target.the("Input element for Meeting organized by list").
             located(By.cssSelector("div#select2-drop > div > input#s2id_autogen9_search"));
     public static final Target SPAN_MEETING_ELEMENT_ORGANIZEDBY_LIST = Target.the("Span element for Meeting organized by list").
-            located(By.cssSelector("div#select2-drop > ul > li > div > span"));
+            locatedBy("//div[@id='select2-drop']//ul//li");
+            //located(By.cssSelector("div#select2-drop > ul > li > div > span"));
 
 
     //Meeting reporter List
@@ -60,7 +64,8 @@ public class FormCreationMeetingPage {
     public static final Target INPUT_MEETING_REPORTER_LIST = Target.the("Input element for Meeting reporter list").
             located(By.cssSelector("div#select2-drop > div > input#s2id_autogen10_search"));
     public static final Target SPAN_MEETING_ELEMENT_REPORTER_LIST = Target.the("Span element for Meeting reporter list").
-            located(By.cssSelector("div#select2-drop > ul > li > div > span"));
+            locatedBy("//div[@id='select2-drop']//ul//li");
+            //located(By.cssSelector("div#select2-drop > ul > li > div > span"));
 
     //Meeting attendeeList List
     public static final Target SPAN_MEETING_ATTENDEELIST_LIST = Target.the("Span element for Meeting attendeeList list").
@@ -68,7 +73,8 @@ public class FormCreationMeetingPage {
     public static final Target INPUT_MEETING_ATTENDEELIST_LIST = Target.the("Input element for Meeting attendeeList list").
             located(By.cssSelector("div#select2-drop > div > input#s2id_autogen12_search"));
     public static final Target SPAN_MEETING_ELEMENT_ATTENDEELIST_LIST = Target.the("Span element for Meeting attendeeList list").
-            located(By.cssSelector("div#select2-drop > ul > li > div > span"));
+            locatedBy("//div[@id='select2-drop']//ul//li");
+            //located(By.cssSelector("div#select2-drop > ul > li > div > span"));
 
 
 

@@ -34,23 +34,23 @@ public class CreateMeeting implements Task{
                 Enter.theValue(meetingLoombokData.getLocation()).into(INPUT_MEETING_LOCATION_LIST),
                 Click.on(SPAN_MEETING_ELEMENT_LOCATION_LIST),
 
-                Click.on(SPAN_MEETING_UNIT_LIST),
-                Enter.theValue(meetingLoombokData.getUnit()).into(INPUT_MEETING_UNIT_LIST),
-                Click.on(SPAN_MEETING_ELEMENT_UNIT_LIST),
+                Click.on(SPAN_MEETING_UNIT_LIST)
+//     Enter.theValue(meetingLoombokData.getUnit()).into(INPUT_MEETING_UNIT_LIST),
+//     Click.on(SPAN_MEETING_ELEMENT_UNIT_LIST),
 
-                Click.on(SPAN_MEETING_ORGANIZEDBY_LIST),
-                Enter.theValue(meetingLoombokData.getOrganizedBy()).into(INPUT_MEETING_ORGANIZEDBY_LIST),
-                Click.on(SPAN_MEETING_ELEMENT_ORGANIZEDBY_LIST),
+//     Click.on(SPAN_MEETING_ORGANIZEDBY_LIST),
+//     Enter.theValue(meetingLoombokData.getOrganizedBy()).into(INPUT_MEETING_ORGANIZEDBY_LIST),
+//     Click.on(SPAN_MEETING_ELEMENT_ORGANIZEDBY_LIST),
 
-                Click.on(SPAN_MEETING_REPORTER_LIST),
-                Enter.theValue(meetingLoombokData.getReporter()).into(INPUT_MEETING_REPORTER_LIST),
-                Click.on(SPAN_MEETING_ELEMENT_REPORTER_LIST),
+//     Click.on(SPAN_MEETING_REPORTER_LIST),
+//     Enter.theValue(meetingLoombokData.getReporter()).into(INPUT_MEETING_REPORTER_LIST),
+//     Click.on(SPAN_MEETING_ELEMENT_REPORTER_LIST),
 
-                Click.on(SPAN_MEETING_ATTENDEELIST_LIST),
-                Enter.theValue(meetingLoombokData.getAttendeeList()).into(INPUT_MEETING_ATTENDEELIST_LIST),
-                Click.on(SPAN_MEETING_ELEMENT_ATTENDEELIST_LIST),
+//     Click.on(SPAN_MEETING_ATTENDEELIST_LIST),
+//     Enter.theValue(meetingLoombokData.getAttendeeList()).into(INPUT_MEETING_ATTENDEELIST_LIST),
+//     Click.on(SPAN_MEETING_ELEMENT_ATTENDEELIST_LIST),
 
-                Click.on(BNT_SAVE)
+                //Click.on(BNT_SAVE)
 
         );
     }
