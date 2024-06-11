@@ -16,6 +16,7 @@
     def versionApacheCXF='3.4.4'
     def versionCucumber='7.6.0'
     repositories {
+        mavenLocal()
         mavenCentral()
         maven {
             url 'https://pkgs.dev.azure.com/DEV-FormacionCH/f11a2ddb-f565-44a3-8710-e9e1472d29ee/_packaging/Choucair/maven/v1'
@@ -24,12 +25,14 @@
 
     buildscript {
         repositories {
+            mavenLocal()
+            mavenCentral()
             maven {
                 url "https://plugins.gradle.org/m2/"
             }
         }
         dependencies {
-            classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.12"
+            classpath "net.serenity-bdd:serenity-gradle-plugin:4.1.3"
         }
     }
 
